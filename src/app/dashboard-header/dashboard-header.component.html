@@ -1,0 +1,47 @@
+<!-- <p>
+  hello {{dateMessage}}
+  
+</p>
+<p>{{someNumber +1}}</p>
+<p>{{addTwoNumbers(10,10)}}</p>
+<input name="first" #firstNumber><br><br>
+<input name="second" #secondNumber><br><br>
+<button (click)="addition(firstNumber.value, secondNumber.value)">Add</button>
+<h2>Addition of number:{{a}}</h2>
+<p>{{user.name}}</p>
+<p>{{user.title}}</p>
+<p>{{user.address}}</p>
+<div *ngIf="user.phone.length>0">
+  <p *ngFor="let phoneNumber of user.phone">{{phoneNumber}}</p>
+</div> -->
+<!-- <button (click)="loginCheck()">login</button>
+<div *ngIf="isLoggedIn">
+ <h2> Please login, friend.</h2>
+</div>
+ -->
+
+<!-- if-else program
+<input name="first" #firstNumber><br>
+<button (click)="checkValue(firstNumber.value, secondNumber.value)">Check Value</button>
+<div *ngIf="flag; else else_block">
+  <p>hello there!!</p>
+  <ng-template #else_block></ng-template>
+  
+</div> -->
+<!-- 
+<div>
+  Months:
+  <select>
+    <option *ngFor="let i of months">{{i}}</option>
+  </select>
+  <button (click)= "buttonClick(event)">Click me</button>
+</div> -->
+
+<form [formGroup]="form1"  (ngSubmit)="checkValue()">
+<input type="number" name="firstNumber" formControlName="fName">
+<input type="number" name="secondNumber" formControlName="lName">
+<button type="submit">Check Value</button></form>
+<p appMyError>sejal</p>
+<input type="number" [(ngModel)]="aNumber">
+<p>hello {{aNumber}}</p>
+<p>{{aNumber| sqrt}}</p>

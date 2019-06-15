@@ -1,0 +1,16 @@
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label><b>Username</b></label>
+       <input type="text" placeholder="Enter Username" class="form-contorl" formControlName="userName" #usrName>
+    <div class="alert alert-danger" *ngIf="profileForm.get('userName').hasError('required') && profileForm.get('userName').touched">required</div>
+
+
+
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" formControlName="userPassword" #usrPassword>
+    <div class="alert alert-danger" *ngIf="profileForm.get('userPassword').hasError('required') && profileForm.get('userPassword').touched">required</div>
+    <div>
+      <button type="submit" (click)="onClick(usrName.value, usrPassword.value)">Login</button>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,11 @@
+label{
+    display: inline-block;
+    width: 100px;
+}
+input, textarea{
+    width: 300px;
+    padding: 5px;
+}
+.ng-valid[required], .ng-valid.required{
+    border: 2px solid green;
+}

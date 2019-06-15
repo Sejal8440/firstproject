@@ -1,0 +1,75 @@
+<form [formGroup]="profileForm" (ngSubit)="onSubmit()">
+<p>
+  <label for="FirstName">First Name:</label>
+  <input type="text" id="name" name="name" formControlName="fName">
+</p>
+
+<p>
+  <label for="Last Name">Last Name:</label>
+  <input type="text" id="name" name="name" formControlName="lName">
+</p>
+<div formGroupName="address">
+  <h5>Address:</h5>
+<p>
+  <label for="Street Name">Street:</label>
+  <input type="text" id="sname" name="sname" formControlName="street">
+</p>
+<p>
+  <label for="City Name">City:</label>
+  <input type="text" id="cname" name="cname" formControlName="city">
+</p>
+<p>
+  <label for="State Name">State:</label>
+  <input type="text" id="statename" name="statename" formControlName="state">
+</p>
+<p>
+  <label for="Pincode">Pincode:</label>
+  <input type="number" id="zip" name="zip" formControlName="zip">
+</p>
+</div>
+<p>
+  <button type="submit" [disabled]="!profileForm.valid" [ngStyle]="myStyle">Submit</button>
+  <button (click)="updateProfile()">Update Profile</button>
+</p>
+<p>
+  
+</p>
+</form> -->
+
+<!-- <h1 *ngIf="!headingDisplay; then thenBlock else elseBlock">
+  This is heading one
+</h1>
+<ng-template #thenBlock>
+    <h2>
+        This is heading two
+    </h2>
+</ng-template>
+<ng-template #elseBlock>
+    <h3>
+        This is heading third
+    </h3>
+</ng-template>
+<button (click)="onClick()">CheckType</button> -->
+
+<!-- <div [ngSwitch]="color" >
+  <input type="text" #pasvalue>
+  <p *ngSwitchCase='red'>
+   You have selected red color
+  </p>
+  <p *ngSwitchCase='blue'>
+   You have selected blue color
+  </p>
+  <p *ngSwitchCase='green'>
+   You have selected green color
+  </p>
+  <p *ngSwitchDefault>
+    Please Select color
+  </p>
+  </div>
+  <p><button (click)="sC(pasvalue.value)">check value</button></p>
+
+<!-- <input type="text" [(ngModel)]="fullName">
+<p>{{ fullName | uppercase }}</p> -->
+
+<h2>{{fullName.firstName}}</h2>
+  
